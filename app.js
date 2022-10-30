@@ -13,7 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 //add this to include static files.
 app.use(express.static("public"));
 
-mongoose.connect(process.env.ATLAS_KEY);
+mongoose.connect(process.env.ATLAS_KEY, { useNewUrlParser: true });
 
 
 //setup itemsSchema for list items and add default items.
